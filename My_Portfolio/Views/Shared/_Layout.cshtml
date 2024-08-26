@@ -8,22 +8,15 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-
 </head>
 <body>
     <header>
         <nav class="container">
             <div class="logo">Portfolio</div>
             <ul>
-                <a href="#hero">
-                <li>Home</li>
-                </a>
-                <a href="#project">
-                <li>Projects</li>
-                </a>
-                <a href="#contact">
-                <li>Contact</li>
-                </a>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,35 +26,26 @@
         <div class="sidebar">
             <h2>Sidebar</h2>
             <ul>
-                <li>
-                    <a href="#"><i class="fa-solid fa-house"></i>Home</a>
-                </li>
-                 <li>
-                    <a href="#"><i class="fa-solid fa-address-card"></i></i>About me</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-diagram-project"></i></i>Projects</a>
-                </li>
-                 <li>
-                    <a href="#"><i class="fa-solid fa-arrow-right"></i></i>Services</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-address-book"></i>Contact</a>
-                </li>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-address-card"></i>About me</a></li>
+                <li><a href="#"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-right"></i>Services</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
             </ul>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - My_Portfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer class="footer">
+        <p> &copy; 2024 - My_Portfolio -<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+
     </footer>
+  
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

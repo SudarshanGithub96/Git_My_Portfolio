@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="contact container-fluid" style="background-image: url('../images/naoram-sea-V675n9gjyL0-unsplash.jpg'); background-size: cover; background-position: center;">
+<div class="contact container-fluid">
     <h1 class="text-center">Contact</h1>
 
     <div class="row">
@@ -24,7 +24,8 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
+                    <input asp-for="Name" class="form-control effect-10" />
+                    <span class="focus-bg"></span>
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -43,7 +44,7 @@
                     <span asp-validation-for="Message" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Submit" class="btn btn-primary " />
+                    <input type="submit" value="Submit" id="box" class="btn text-light" />
                 </div>
             </form>
         </div>

@@ -17,9 +17,11 @@
             <nav class="navbar">
                 <a asp-area="" asp-action="Index" asp-controller="Home">Home</a>
                 <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
+                <a asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+                <a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a>
                 <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                <a asp-area="" asp-controller="Home" asp-action="SignUp">SignUp</a>
+                <a asp-area="" asp-controller="Home" asp-action="Login">Login</a>
             </nav>
         </nav>
     </header>

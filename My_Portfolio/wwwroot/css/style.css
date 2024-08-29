@@ -77,18 +77,21 @@ header {
 }
 
 .name_text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #FF5733;
+    font-weight:600;
 }
 
 #hero h2 {
+    display: inline-block;
+    width:fit-content;
     font-size: 2.3rem;
     overflow: hidden;
     font-weight: normal;
     border-right: 0.15em solid orange;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 2s steps(25, end), blink-caret 0.75s step-end infinite;
+    animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 .hero_image {
@@ -97,7 +100,7 @@ header {
 
 @keyframes typing {
     from {
-        width: 0;
+        width: 0%;
     }
 
     to {
@@ -107,7 +110,7 @@ header {
 
 
 @keyframes blink-caret {
-    from, to {
+    from, to{
         border-color: transparent;
     }
 
@@ -326,11 +329,10 @@ footer {
             text-decoration: underline;
         }
 
-
-
 .btn{
     margin:10px;
 }
+
 
 @media (max-width: 767.98px) {
     .contact {
@@ -349,3 +351,28 @@ footer {
             font-size: 1rem;
         }
 }
+
+
+
+
+.Signup_Page {
+    background: var(--lighting-color);
+    height: 105vh;
+    padding: 70px;
+}
+
+    .Signup_Page h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+.Login_page {
+    background: var(--lighting-color);
+    height: 105vh;
+    padding: 70px;
+}
+    .Login_page h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }

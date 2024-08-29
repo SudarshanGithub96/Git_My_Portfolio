@@ -1,0 +1,76 @@
+﻿@model My_Portfolio.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+    
+}
+
+
+<div class="Login_page container-fluid">
+    <div class="row">
+        <div class="col-4 offset-3 border border-warning-subtle rounded pl-5 pr-5 pb-5">
+            <div class="text-center">
+                <h1 class="text-info">User Login Up Form</h1>
+            </div>
+
+            <form asp-action="Login" class="text-light" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Username" class="control-label"></label>
+                    <input asp-for="Username" class="form-control" placeholder="User Name" autocomplete="off" type="text" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Password" autocomplete="off" type="text" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary btn-lg mb-1 float-right" id="LoginBtn" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#LoginBtn').submit(function (e) {
+            e.preventDefault();
+
+            $('#formValidationSummary').html('');
+
+            var formData = {
+                Username: $('#Username').val(),
+                Password: $('#Password').val(),
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Login", "Home")', 
+                data: formData,
+                success: function (response) {
+                    if (response.success) {
+                        alert('Registration successful!');
+                    } else {
+                        $('#formValidationSummary').html(response.message);
+                    }
+                },
+                error: function () {
+                    alert('An error occurred. Please try again.');
+                }
+            });
+        });
+    });
+</script>

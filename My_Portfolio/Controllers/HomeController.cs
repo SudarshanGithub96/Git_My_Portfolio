@@ -24,6 +24,32 @@ namespace My_Portfolio.Controllers
             ViewBag.Title = "Privacy";
             return View();
         }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            ViewBag.Title = "Login";
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string Username, string Password)
+        {
+
+            ViewBag.Title = "Login";
+            return View();
+        }
+        [HttpGet]
+        public IActionResult SignUp()
+        {
+            ViewBag.Title = "SignUp";
+            return View();
+        }
+        [HttpPost]
+        public IActionResult SignUp(string Username, string Email, long Mobile, string Password, string ConfirmPassword)
+        {
+            ViewBag.Title = "SignUp";
+            return View();
+        }
 
         public IActionResult Contact()
         {

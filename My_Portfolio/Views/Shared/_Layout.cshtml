@@ -5,47 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Portfolio</div>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <nav class="container d-flex justify-content-between">
+            <a href="/Home/Index" class="logo">Portfolio</a>
+
+            <nav class="navbar">
+                <a asp-area="" asp-action="Index" asp-controller="Home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+            </nav>
         </nav>
     </header>
 
 
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="#"><i class="fa-solid fa-address-card"></i>About me</a></li>
-                <li><a href="#"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
-                <li><a href="#"><i class="fa-solid fa-arrow-right"></i>Services</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
-            </ul>
-        </div>
+    @*   <div class="wrapper">
+    <div class="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+    <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="#"><i class="fa-solid fa-address-card"></i>About me</a></li>
+    <li><a href="#"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+    <li><a href="#"><i class="fa-solid fa-arrow-right"></i>Services</a></li>
+    <li><a href="#contact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+    </ul>
     </div>
+    </div> *@
 
-    <div class="container-fluid">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="footer">
-        <p> &copy; 2024 - My_Portfolio -<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+    @*Footer Part Start*@
+    <footer class="footer-text text-center">
 
+        <div class="copyright pt-1 pb-1">© 2024 Portfolio</div>
     </footer>
-  
+    @*Footer Part End*@
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

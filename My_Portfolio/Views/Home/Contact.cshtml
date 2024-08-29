@@ -1,0 +1,57 @@
+﻿@model My_Portfolio.Models.contact_model
+
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="contact container-fluid" style="background-image: url('../images/naoram-sea-V675n9gjyL0-unsplash.jpg'); background-size: cover; background-position: center;">
+    <h1 class="text-center">Contact</h1>
+
+    <div class="row">
+        <div class="content col-md-6">
+            <h3 class="title">Contact Info</h3>
+            <div class="info">
+                <h3><i class="fas fa-envelope"></i>abcdefghilkfjk@gmail.com</h3>
+                <h3><i class="fas fa-phone"></i>9870-987-976</h3>
+                <h3><i class="fas fa-map-marker-alt"></i> Noida, Uttar Pradesh, India</h3>
+            </div>
+        </div>
+
+        <div class="text-black col-md-4">
+
+            <form asp-action="Contact">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Message" class="control-label"></label>
+                    <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary " />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

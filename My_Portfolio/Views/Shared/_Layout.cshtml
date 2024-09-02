@@ -14,7 +14,7 @@
         <nav class="container d-flex justify-content-between">
             <a href="/Home/Index" class="logo">Portfolio</a>
 
-            <nav class="navbar">
+            <nav class="navbar text-uppercase">
                 <a asp-area="" asp-action="Index" asp-controller="Home">Home</a>
                 <a href="#about">About</a>
                 <a asp-area="" asp-controller="Home" asp-action="Services">Services</a>
@@ -58,5 +58,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+
 </body>
 </html>

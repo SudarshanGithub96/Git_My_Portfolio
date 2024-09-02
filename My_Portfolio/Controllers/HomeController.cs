@@ -18,6 +18,20 @@ namespace My_Portfolio.Controllers
             ViewBag.Title = "Home ";
             return View();
         }
+        [HttpPost]
+        public IActionResult DownloadCV()
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files", "YourCV.pdf"); // Adjust the path and filename as needed
+            var fileName = "Sudarshan_Sharma_CV.pdf"; // The name the file will have when downloaded
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound(); // Handle the case when the file doesn't exist
+            }
+
+            var fileBytes = System.IO.File.ReadAllBytes(filePath);
+            return File(fileBytes, "application/pdf", fileName);
+        }
 
         public IActionResult Privacy()
         {
@@ -38,6 +52,10 @@ namespace My_Portfolio.Controllers
             ViewBag.Title = "Login";
             return View();
         }
+
+       
+
+
         [HttpGet]
         public IActionResult SignUp()
         {

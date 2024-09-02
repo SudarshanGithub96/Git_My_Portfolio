@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\My_Portfolio.bundle.scp.css"
     },
     {
+      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\Account_Style.css",
+      "PackagePath": "staticwebassets\\css\\Account_Style.css"
+    },
+    {
       "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

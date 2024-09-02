@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SViaZjapBRmDYAwi7T4ySREp9K+4W5/j1/UA4P07ItE=",
+  "Hash": "pKgKogxCn1F2U7bmIa0hrUjxkmcpkIfxlP1uG5s/YZE=",
   "Source": "My_Portfolio",
   "BasePath": "_content/My_Portfolio",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\My_Portfolio.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\Account_Style.css",
+      "SourceId": "My_Portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\",
+      "BasePath": "_content/My_Portfolio",
+      "RelativePath": "css/Account_Style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Account_Style.css"
     },
     {
       "Identity": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\site.css",

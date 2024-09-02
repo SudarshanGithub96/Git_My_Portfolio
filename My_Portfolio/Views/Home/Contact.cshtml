@@ -6,24 +6,37 @@
 }
 
 <div class="contact container-fluid">
-    <h1 class="text-center">Contact</h1>
+    <h1 class="text-center text-white">Contact</h1>
 
-    <div class="row">
-        <div class="content col-md-6">
-            <h3 class="title">Contact Info</h3>
+    <div class="row contact_row">
+        <div class="Contact_content col-md-6">
+
+            <div class="loop-wrapper">
+                <div class="mountain"></div>
+                <div class="hill"></div>
+                <div class="tree"></div>
+                <div class="tree"></div>
+                <div class="tree"></div>
+                <div class="rock"></div>
+                <div class="truck"></div>
+                <div class="wheels"></div>
+            </div>
+            <br />
+            <br />
+            <h3 class="title animate__animated animate__pulse">Contact Info</h3>
             <div class="info">
-                <h3><i class="fas fa-envelope"></i>abcdefghilkfjk@gmail.com</h3>
-                <h3><i class="fas fa-phone"></i>9870-987-976</h3>
-                <h3><i class="fas fa-map-marker-alt"></i> Noida, Uttar Pradesh, India</h3>
+                <h3 class="animate__animated animate__bounceInLeft"><i class="fas fa-envelope"></i>abcdefghilkfjk@gmail.com</h3>
+                <h3 class="animate__animated animate__bounceInLeft"><i class="fas fa-phone"></i>9870-987-976</h3>
+                <h3 class="animate__animated animate__bounceInLeft"><i class="fas fa-map-marker-alt"></i>Noida, Uttar Pradesh, India</h3>
             </div>
         </div>
 
-        <div class="text-black col-md-4">
+        <div class="text-white col-md-6">
 
-            <form asp-action="Contact">
+            <form class="animate__animated animate__bounceInRight"  asp-action="Contact">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
+                    <label asp-for="Name"></label>
                     <input asp-for="Name" class="form-control effect-10" />
                     <span class="focus-bg"></span>
                     <span asp-validation-for="Name" class="text-danger"></span>

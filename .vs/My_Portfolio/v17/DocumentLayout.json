@@ -11,8 +11,32 @@
       "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\wwwroot\\css\\account_style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\wwwroot\\css\\account_style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\views\\account\\login_page.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\views\\account\\login_page.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|d:\\project1\\git_my_portfolio\\my_portfolio\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBB9189D-D35B-4BED-973C-913A8690BF73}|My_Portfolio\\My_Portfolio.csproj|solutionrelative:my_portfolio\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,33 +46,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "My_Portfolio\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Controllers\\HomeController.cs",
               "RelativeToolTip": "My_Portfolio\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwDAAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T05:58:57.679Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "My_Portfolio\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "My_Portfolio\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T06:28:36.017Z",
               "EditorCaption": ""
             },
             {
@@ -59,9 +70,102 @@
               "RelativeDocumentMoniker": "My_Portfolio\\wwwroot\\css\\style.css",
               "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\style.css",
               "RelativeToolTip": "My_Portfolio\\wwwroot\\css\\style.css",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAAAFYAAAAVAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAIwGkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-08-29T08:43:37.258Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "My_Portfolio\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "My_Portfolio\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T05:31:46.438Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login_Page.cshtml",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Account\\Login_Page.cshtml",
+              "RelativeDocumentMoniker": "My_Portfolio\\Views\\Account\\Login_Page.cshtml",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Account\\Login_Page.cshtml",
+              "RelativeToolTip": "My_Portfolio\\Views\\Account\\Login_Page.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwBMAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T10:28:24.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Account_Style.css",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\Account_Style.css",
+              "RelativeDocumentMoniker": "My_Portfolio\\wwwroot\\css\\Account_Style.css",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\css\\Account_Style.css",
+              "RelativeToolTip": "My_Portfolio\\wwwroot\\css\\Account_Style.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-02T10:24:38.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "My_Portfolio\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "My_Portfolio\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T10:23:18.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "My_Portfolio\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "My_Portfolio\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T05:56:10.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "My_Portfolio\\Views\\Home\\Login.cshtml",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "My_Portfolio\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAgwA0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T04:27:33.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "My_Portfolio\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "My_Portfolio\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T06:28:36.017Z",
               "EditorCaption": ""
             }
           ]

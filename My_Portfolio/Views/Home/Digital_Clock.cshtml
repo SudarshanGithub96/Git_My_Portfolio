@@ -1,0 +1,172 @@
+﻿
+
+<section class="digital_clock">
+    <div class="container container_digital">
+        <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </div>
+    @* Modal Calculator *@
+    <button type="button" class="btn Modal_Button modal_Button_Skills" data-bs-toggle="modal" data-bs-target="#myModalSkills">Calculator</button>
+
+
+    <div class="modal" id="myModalSkills">
+        <div class="modal-dialog text-dark">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Skills</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="text" name="first_number" id="first_number" placeholder="First Number" />
+                    <input type="text" name="second_number" id="second_number" placeholder="Second Number" /><br />
+                    <br />
+                    <button onclick="Addition()">Add</button>
+                    <button onclick="Subtraction()">Subtract</button>
+                    <button onclick="Multiplication()">Multiply</button>
+                    <button onclick="Division()">Divide</button>
+                    <br />
+                    <br />
+                    <input type="text" name="res" id="res" placeholder="Result" readonly />
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+@* Digital clock *@
+<script>
+    let hrs = document.getElementById('hrs');
+    let min = document.getElementById('min');
+    let sec = document.getElementById('sec');
+
+    setInterval(() => {
+        let currentTime = new Date();
+
+        hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+        sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+    }, 1000)
+</script>
+
+@* Digital clock *@
+<script>
+    function updateDateTime() {
+        var now = new Date();
+
+        var options = {
+                                   /*  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', */ hour: '2-digit', minute: '2-digit', second: '2-digit'
+        };
+        var formattedDateTime = now.toLocaleDateString('en-US', options);
+
+        document.getElementById('dateTimeDisplay').innerHTML = formattedDateTime;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+
+@* Calculator *@
+<script>
+    function Addition() {
+        var firstNumber = document.getElementById('first_number').value;
+        var secondNumber = document.getElementById('second_number').value;
+
+        if (firstNumber.trim() === "" || secondNumber.trim() === "") {
+            alert("Please fill out both input fields.");
+            return;
+        }
+
+        var a = parseFloat(firstNumber);
+        var b = parseFloat(secondNumber);
+
+
+        if (isNaN(a) || isNaN(b)) {
+            alert("Please enter valid numbers!");
+            return;
+        }
+        var res = a + b;
+        document.getElementById('res').value = res;
+    }
+
+    function Subtraction() {
+        var firstNumber = document.getElementById('first_number').value;
+        var secondNumber = document.getElementById('second_number').value;
+
+        if (firstNumber.trim() === "" || secondNumber.trim() === "") {
+            alert("Please fill out both input fields.");
+            return;
+        }
+
+        var a = parseFloat(firstNumber);
+        var b = parseFloat(secondNumber);
+
+
+        if (isNaN(a) || isNaN(b)) {
+            alert("Please enter valid numbers!");
+            return;
+        }
+        var res = a - b;
+        document.getElementById('res').value = res;
+    }
+
+    function Multiplication() {
+        var firstNumber = document.getElementById('first_number').value;
+        var secondNumber = document.getElementById('second_number').value;
+
+        if (firstNumber.trim() === "" || secondNumber.trim() === "") {
+            alert("Please fill out both input fields.");
+            return;
+        }
+
+        var a = parseFloat(firstNumber);
+        var b = parseFloat(secondNumber);
+
+
+        if (isNaN(a) || isNaN(b)) {
+            alert("Please enter valid numbers!");
+            return;
+        }
+        var res = a * b;
+        document.getElementById('res').value = res;
+    }
+
+    function Division() {
+        var firstNumber = document.getElementById('first_number').value;
+        var secondNumber = document.getElementById('second_number').value;
+
+        if (firstNumber.trim() === "" || secondNumber.trim() === "") {
+            alert("Please fill out both input fields.");
+            return;
+        }
+
+        var a = parseFloat(firstNumber);
+        var b = parseFloat(secondNumber);
+
+
+        if (isNaN(a) || isNaN(b)) {
+            alert("Please enter valid numbers!");
+            return;
+        }
+        var res = a / b;
+        document.getElementById('res').value = res;
+    }
+</script>
+
+
+

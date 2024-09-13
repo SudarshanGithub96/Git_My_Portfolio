@@ -8,5 +8,10 @@ namespace My_Portfolio.Controllers
         {
             return View();
         }
+
+        public IActionResult SignUp_Page()
+        {
+            return View();
+        }
     }
 }

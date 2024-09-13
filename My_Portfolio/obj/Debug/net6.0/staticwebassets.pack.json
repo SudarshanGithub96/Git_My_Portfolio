@@ -41,12 +41,24 @@
       "PackagePath": "staticwebassets\\images\\backgroundimage2.jfif"
     },
     {
-      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\backgroundimage3.jfif",
-      "PackagePath": "staticwebassets\\images\\backgroundimage3.jfif"
+      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\bckgroundimagemain.jpg",
+      "PackagePath": "staticwebassets\\images\\bckgroundimagemain.jpg"
+    },
+    {
+      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\footer_image.png",
+      "PackagePath": "staticwebassets\\images\\footer_image.png"
+    },
+    {
+      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\footer_logo.png",
+      "PackagePath": "staticwebassets\\images\\footer_logo.png"
     },
     {
       "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\hero.png",
       "PackagePath": "staticwebassets\\images\\hero.png"
+    },
+    {
+      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\markus-spiske-6pflEeSzGUo-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\markus-spiske-6pflEeSzGUo-unsplash.jpg"
     },
     {
       "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\naoram-sea-V675n9gjyL0-unsplash.jpg",
@@ -83,6 +95,10 @@
     {
       "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\images\\project9.png",
       "PackagePath": "staticwebassets\\images\\project9.png"
+    },
+    {
+      "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "D:\\Project1\\Git_My_Portfolio\\My_Portfolio\\wwwroot\\js\\site.js",

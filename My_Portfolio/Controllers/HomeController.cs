@@ -3,18 +3,26 @@ using My_Portfolio.Models;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Net;
+using My_Portfolio.Interface;
+using System.Text.RegularExpressions;
 
 namespace My_Portfolio.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly EmployeeDataAccessLayer dal;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public HomeController(ILogger<HomeController> logger)
+        private IEmail _ObjEmail;
+        private IEmployees _ObjEmployees;
+
+
+        public HomeController(ILogger<HomeController> logger, IHttpClientFactory httpClientFactory, IConfiguration configuration, IEmail objEmail, IEmployees ObjEmployees)
         {
-            dal = new EmployeeDataAccessLayer();
-            _logger = logger;
+            this._logger = logger;
+            this._ObjEmail = objEmail;
+            this._ObjEmployees = ObjEmployees;
+            this._httpClientFactory = httpClientFactory;
         }
 
         public IActionResult Index()
@@ -22,46 +30,11 @@ namespace My_Portfolio.Controllers
             ViewBag.Title = "Home";
             return View();
         }
-
         public IActionResult About()
         {
             ViewBag.Title = "About";
             return View();
         }
-        public IActionResult Privacy()
-        {
-            ViewBag.Title = "Privacy";
-            return View();
-        }
-        [HttpGet]
-        public IActionResult Login()
-        {
-            ViewBag.Title = "Login";
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Login(string Username, string Password)
-        {
-
-            ViewBag.Title = "Login";
-            return View();
-        }
-
-
-        [HttpGet]
-        public IActionResult SignUp()
-        {
-            ViewBag.Title = "SignUp";
-            return View();
-        }
-        [HttpPost]
-        public IActionResult SignUp(string Username, string Email, long Mobile, string Password, string ConfirmPassword)
-        {
-            ViewBag.Title = "SignUp";
-            return View();
-        }
-
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact";
@@ -76,9 +49,17 @@ namespace My_Portfolio.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var fromAddress = new MailAddress("sudarshan.sharma@kreatetechnologies.com", "Name");
-                    var password = Environment.GetEnvironmentVariable("SMTP_PASSWORD") ?? "Kreate@9870"; // Use a secure method to store passwords
-                    var toAddress = new MailAddress("surajrwt0056@gmail.com", "Contact Us - Kreate Energy FZE");
+                    EmailModel emailmodel = new EmailModel
+                    {
+                        E_Name = name,
+                        E_Email = email,
+                        E_Phone = phone,
+                        E_Message = message
+                    };
+
+                    var fromAddress = new MailAddress("noreply@kreatecloud.com", "contactus@kreatenergy.ae");
+                    dynamic password = "Foq97150";
+                    var toAddress = new MailAddress("ritika.sharma@kreatetechnologies.com", "Contact Us - Kreate Energy FZE");
 
                     var smtpClient = new SmtpClient
                     {
@@ -108,6 +89,7 @@ namespace My_Portfolio.Controllers
                     })
                     {
                         smtpClient.Send(mailMessage);
+                        this._ObjEmail.SaveEmailData(emailmodel);
                     }
                     return Json(new { success = true });
                 }
@@ -127,39 +109,6 @@ namespace My_Portfolio.Controllers
             ViewBag.Title = "Digital_Clock";
             return View();
         }
-
-        public EmployeeDataAccessLayer GetDal()
-        {
-            return dal;
-        }
-
-        public IActionResult GetEmployee()
-        {
-            ViewBag.Title = "GetEmployee";
-            List<Employees> em = dal.GetEmployees();
-            return View(em);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

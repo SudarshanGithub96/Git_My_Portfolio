@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using My_Portfolio;
+using My_Portfolio.Interface;
 using My_Portfolio.Models;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,9 @@ namespace KreateSPC
         {
 
             services.AddHttpClient(); // Add for chat
+            services.AddControllersWithViews();
+          
+            // Other services...
             services.AddControllersWithViews();
         }
 

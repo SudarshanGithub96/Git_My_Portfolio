@@ -1,7 +1,21 @@
+using My_Portfolio.Interface;
+using My_Portfolio.Models;
+using My_Portfolio;
+using My_Portfolio.DAO;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+
+builder.Services.Configure<ConnectionString>(builder.Configuration.GetSection("ConnectionStrings"));
+
+// Register IAddEmail and DataAccessLayer
+builder.Services.AddScoped<IEmail, DataAccessLayer>();
+builder.Services.AddScoped<IEmployees, EmployeeDAO>();
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
+builder.Services.AddSession();
+
 
 var app = builder.Build();
 
@@ -13,6 +27,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

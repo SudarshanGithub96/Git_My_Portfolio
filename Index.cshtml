@@ -1,0 +1,58 @@
+﻿
+<section id="hero">
+    <div class="snow"></div>
+    <div id="dateTimeDisplay"></div>
+    <div class="container d-flex justify-content-between">
+        <div class="hero_image animate__animated animate__bounceInLeft">
+            <img src="~/images/hero.png" alt="hero" />
+        </div>
+
+        <div class="hero_content">
+            <h1 class="animate__animated  animate__flipInX">
+                <span class="hi_text">Hi</span>, I'm
+                <br />
+                <span class="name_text">Sudarshan Sharma</span>
+            </h1>
+            <h2>Dotnet Developer</h2>
+        </div>
+
+        <a href="#about" class="btn btn_About_me_Index">About me</a>
+        <button type="post" class="btn btn_download_CV_Index"><i class="fa fa-download download"></i>Download CV</button>
+    </div>
+</section>
+
+
+<section class="about" id="about">
+    <div class="container d-flex">
+        <div class="about-section">
+            <h2 class="about_heading">About Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+            <a href="/Home/About" class="btn btn_About_me_Index">Read More</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script>
+    function updateDateTime() {
+        var now = new Date();
+
+        var options = {
+           /*  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', */ hour: '2-digit', minute: '2-digit', second: '2-digit'
+        };
+        var formattedDateTime = now.toLocaleDateString('en-US', options);
+
+        document.getElementById('dateTimeDisplay').innerHTML = formattedDateTime;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+
+
+
+
+

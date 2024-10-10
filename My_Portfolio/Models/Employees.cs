@@ -20,14 +20,12 @@ namespace My_Portfolio.Models
         public string? Gender { get; set; }
 
         [Required(ErrorMessage = "Age is required")]
-        [Range(1, 100, ErrorMessage = "Please enter a valid age")]
         public int Age { get; set; }
 
         [Required(ErrorMessage = "Date of Birth is required")]
         public string? DateOfBirth { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
-        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string? Email { get; set; }
 
         [Required(ErrorMessage = "Phone number is required")]
@@ -45,17 +43,20 @@ namespace My_Portfolio.Models
         [Required(ErrorMessage = "Address is required")]
         public string? Address { get; set; }
 
+
         [Required(ErrorMessage = "City is required")]
         public string? City { get; set; }
+
 
         [Required(ErrorMessage = "State is required")]
         public string? State { get; set; }
 
+
         [Required(ErrorMessage = "Country is required")]
         public string? Country { get; set; }
+        
 
         [Required(ErrorMessage = "Zipcode is required")]
-        [Range(100000, 999999, ErrorMessage = "Invalid Zipcode")]
         public int Zipcode { get; set; }
     }
 }

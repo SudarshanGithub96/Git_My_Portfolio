@@ -19,6 +19,8 @@ namespace My_Portfolio.DAO
             this._ConnectionString = connectionString.Value.SQLDatabase;
         }
 
+
+        //Fetching Employee Table
         public List<Employees> GetAllEmployeeData()
         {
             List<Employees> employeesList = new List<Employees>();
@@ -57,7 +59,7 @@ namespace My_Portfolio.DAO
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Error fetching employee data", ex);
+                    throw new Exception("A database error occurred while fetching employee data.", ex);
                 }
                 finally
                 {
@@ -65,10 +67,9 @@ namespace My_Portfolio.DAO
                 }
                 return employeesList;
             }
-
-
         }
 
+        //Save Employee
         public int SaveEmployeeData(Employees employees)
         {
             int rowAffected = 0;
@@ -97,6 +98,11 @@ namespace My_Portfolio.DAO
                     con.Open();
                     rowAffected = cmd.ExecuteNonQuery();
                 }
+                catch (Exception ex)
+                {
+                    // Log exception details here (for example, using a logging framework)
+                    throw new Exception("Error saving employee data", ex);
+                }
                 finally
                 {
                     if (con.State == ConnectionState.Open)
@@ -108,6 +114,24 @@ namespace My_Portfolio.DAO
             return rowAffected;
         }
 
+        //Delete Employee
+        public int DeleteEmployee(int Emp_Id)
+        {
+            int retVal = 0;
+            string Query = "SP_Delete_EmployeeLog";
+            using (SqlConnection con = new SqlConnection(this._ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@EmployeeLog_Id", Convert.ToInt32(Emp_Id));
+                con.Open();
+                retVal = cmd.ExecuteNonQuery();
+            }
+            return retVal;
+        }
+
+
+        //Update Employee
         public int UpdateEmployeeData(Employees employees)
         {
             int rowAffected = 0;
@@ -182,25 +206,7 @@ namespace My_Portfolio.DAO
         }
 
 
-        public int DeleteEmployee(int Emp_Id)
-        {
-            int retVal = 0;
-            string Query = "SP_Delete_EmployeeLog";
-            using (SqlConnection con = new SqlConnection(this._ConnectionString))
-            {
-                SqlCommand cmd = new SqlCommand(Query, con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@EmployeeLog_Id", Convert.ToInt32(Emp_Id));
-                con.Open();
-                retVal = cmd.ExecuteNonQuery();
-
-
-            }
-            return retVal;
-        }
-
-
-
+        //User Login
         public Employees UserLogin(Employees employees)
         {
             Employees loggedInEmployee = null;
@@ -211,7 +217,6 @@ namespace My_Portfolio.DAO
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Username", employees.Username);
                 cmd.Parameters.AddWithValue("@Password", employees.Password);
-
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -223,16 +228,13 @@ namespace My_Portfolio.DAO
                         {
                             Username = reader["Username"].ToString(),
                             Password = reader["Password"].ToString(),
-                          
                         };
                     }
                 }
                 con.Close();
             }
-
             return loggedInEmployee;
         }
-
 
     }
 }

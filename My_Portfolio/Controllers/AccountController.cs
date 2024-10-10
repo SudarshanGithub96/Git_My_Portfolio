@@ -14,6 +14,7 @@ namespace My_Portfolio.Controllers
 
 
 
+        //User Login
         [HttpGet]
         public IActionResult Login()
         {
@@ -22,19 +23,38 @@ namespace My_Portfolio.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Login(Employees employees)
         {
-            var employee = _ObjEmployees.UserLogin(employees);
-            return View();
+            var loggedInEmployee = _ObjEmployees.UserLogin(employees);
+            if (loggedInEmployee != null)
+            {
+                return RedirectToAction("GetEmployeeList");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Invalid username or password.");
+                return View();
+            }
+
         }
 
-        [HttpGet]        
+
+        //Fetching Employee Data
+        [HttpGet]
         public IActionResult GetEmployeeList()
         {
             List<Employees> emps = _ObjEmployees.GetAllEmployeeData();
+            if (emps == null || !emps.Any())
+            {
+                ViewBag.Message = "No employees found.";
+            }
             return View(emps);
         }
 
+
+
+        //Save Employee Data
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -45,44 +65,47 @@ namespace My_Portfolio.Controllers
         [HttpPost]
         public JsonResult EmployeeSave(string firstname, string lastname, string username, string gender, int age, string dateofbirth, string phone, string email, string password, string confirmpassword, string address, string city, string state, string country, int zipcode)
         {
-            var retVal = 0;
-            Employees objEmployee = new Employees
+            if (ModelState.IsValid)
             {
-                Firstname = firstname,
-                Lastname = lastname,
-                Username = username,
-                Gender = gender,
-                Age = age,
-                DateOfBirth = dateofbirth,
-                Email = email,
-                Phone = phone,
-                Password = password,
-                ConfirmPassword = confirmpassword,
-                Address = address,
-                City = city,
-                State = state,
-                Country = country,
-                Zipcode = zipcode
-            };
+                int retVal = 0;
+                var remoteIpAddress = Request.HttpContext.Connection.RemoteIpAddress;
+                Employees objEmployee = new Employees
+                {
+                    Firstname = firstname,
+                    Lastname = lastname,
+                    Username = username,
+                    Gender = gender,
+                    Age = age,
+                    DateOfBirth = dateofbirth,
+                    Email = email,
+                    Phone = phone,
+                    Password = password,
+                    ConfirmPassword = confirmpassword,
+                    Address = address,
+                    City = city,
+                    State = state,
+                    Country = country,
+                    Zipcode = zipcode
+                };
 
-            var remoteIpAddress = Request.HttpContext.Connection.RemoteIpAddress;
-            retVal = this._ObjEmployees.SaveEmployeeData(objEmployee);
 
-            if (retVal > 0)
-            {
-                return Json(new { success = true, success_message = "Data Saved successfully." });
+                retVal = this._ObjEmployees.SaveEmployeeData(objEmployee);
+
+                if (retVal > 0)
+                {
+                    return Json(new { success = true, success_message = "Data Saved successfully." });
+                }
+                else
+                {
+                    return Json(new { success = false, error_message = "failed to save data in the database." });
+                }
             }
-            else
-            {
-                return Json(new { success = false, error_message = "failed to save data in the database." });
-            }
+            return Json(new { success = false, error_message = "Invalid data submitted." });
         }
 
 
 
-
-
-
+        //Update Employee Data
         [HttpGet]
         public IActionResult EmployeeUpdate(int Emp_Id)
         {
@@ -92,11 +115,12 @@ namespace My_Portfolio.Controllers
         }
 
         [HttpPost]
-        public JsonResult EmployeeUpdate(string firstname, string lastname, string username, string gender, int age, string dateofbirth, string phone, string email, string password, string confirmpassword, string address, string city, string state, string country, int zipcode)
+        public JsonResult EmployeeUpdate(int employeeLog_Id, string firstname, string lastname, string username, string gender, int age, string dateofbirth, string phone, string email, string password, string confirmpassword, string address, string city, string state, string country, int zipcode)
         {
             var retVal = 0;
             Employees objEmployee = new Employees
             {
+                EmployeeLog_Id = employeeLog_Id,
                 Firstname = firstname,
                 Lastname = lastname,
                 Username = username,
@@ -129,12 +153,21 @@ namespace My_Portfolio.Controllers
 
 
 
-        //Delete Controller
+        //Delete Employee Data
         [HttpGet]
         public IActionResult EmployeeDelete(int Emp_Id)
         {
-            int retval = _ObjEmployees.DeleteEmployee(Emp_Id);
-            return RedirectToAction("GetEmployeeList");
+            int retVal = 0;
+            retVal = _ObjEmployees.DeleteEmployee(Emp_Id);
+
+            if (retVal > 0)
+            {
+                return RedirectToAction("GetEmployeeList");
+            }
+            else
+            {
+                return NotFound("Employee not found.");
+            }
         }
 
     }
